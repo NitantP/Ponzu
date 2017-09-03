@@ -1,27 +1,58 @@
 class Item:
     
     def __init__(self, name, purchase_date, expiration_date, quantity):
-        self.name = name
-        self.purchase_date = purchase_date
-        self.expiration_date = expiration_date
-        self.quantity = quantity
+        self._name = name
+        self._purchase_date = purchase_date
+        self._expiration_date = expiration_date
+        self._quantity = quantity
 
-    def set_quantity(self, quantity):
-        self.quantity = quantity
+    def __str__(self):
+        return self._name + "\t" + self._purchase_date + "\t" + self._expiration_date + "\t" + self._quantity + "\n"
 
-    def set_pdate(self, pdate):
-        self.purchase_date = pdate
+    #Name
+    @property
+    def name(self):
+        return self._name
+    
+    @name.setter
+    def name(self, value):
+        self._name = value
 
-    def set_edate(self, edate):
-        self.expiration_date = edate
+    #Quantity
+    @property
+    def quantity(self):
+        return self._quantity
+    
+    @quantity.setter
+    def quantity(self, value):
+        self._quantity = value
 
-    def get_quantity(self):
-        return self.quantity
+    @quantity.deleter
+    def quantity(self):
+        del self._quantity
+    
+    #Purchase date
+    @property
+    def purchase_date(self):
+        return self._purchase_date
+    
+    @purchase_date.setter
+    def purchase_date(self, value):
+        self._purchase_date = value
 
-    def get_pdate(self):
-        return self.purchase_date
+    @purchase_date.deleter
+    def purchase_date(self):
+        del self._purchase_date
+    
+    #Expiration date
+    @property
+    def expiration_date(self):
+        return self._expiration_date
+    
+    @expiration_date.setter
+    def expiration_date(self, value):
+        self._expiration_date = value
 
-    def get_edate(self):
-        return self.expiration_date
-
-
+    @expiration_date.deleter
+    def expiration_date(self):
+        del self._expiration_date    
