@@ -17,8 +17,11 @@ class Pantry:
             print(iname + "\t" + attr[0] + " " + attr[1] + " " + attr[2] + "\n")
 
     def add_item(self, name, purchase_date, expiration_date, quantity):
-        self.pantry[name] = [purchase_date, expiration_date, quantity]
-        self.size += 1
+        if name in self.pantry:
+            print("\nItem is already in the pantry. Try updating it instead!\n")
+        else:
+            self.pantry[name] = [purchase_date, expiration_date, quantity]
+            self.size += 1
     
     def save(self):
         with open("pantry.json", "w") as myPantry:
