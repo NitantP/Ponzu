@@ -12,6 +12,7 @@ class Pantry:
         self.size = 0
     
     def toString(self):
+        """Used to print contents of the pantry."""
         print("Size of pantry: " + str(self.size) + "\n")
         for iname, attr in self.pantry.items():
             print(iname + "\t" + attr[0] + " " + attr[1] + " " + attr[2] + "\n")
