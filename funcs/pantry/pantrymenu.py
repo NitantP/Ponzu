@@ -1,10 +1,11 @@
 import Pantry
-import dill
+import json
 import sys
 
 try:
-    with open("pantry.txt", "rb") as myPantry:
-        pantry = dill.loads(myPantry)
+    with open("pantry.json", "r") as myPantry:
+        pantry = Pantry.Pantry(json.load(myPantry))
+        print("Found a pantry!")
 except:
     pantry = Pantry.Pantry()
 
@@ -12,16 +13,15 @@ print("Welcome to the pantry!\n")
 
 pantrynav = -1
 
-while int(pantrynav) < 4:
+while int(pantrynav) < 3:
     print("[0] Print current pantry\n")
     print("[1] Add item to pantry\n")
-    print("[2] Update item in pantry\n")
-    print("[3] Delete item from pantry\n")
+    print("[2] Save pantry\n")
 
     pantrynav = input("Choose an option (number) from above: ")
 
     if pantrynav == '0':
-        pantry.peek()
+        pantry.toString()
     elif pantrynav == '1':
         iname = input("Name: ")
         ipdate = input("Purchase date: ")
