@@ -30,8 +30,6 @@ while int(pantrynav) < 3:
         print("\n")
         pantry.add_item(iname, ipdate, iedate, iquantity)
     elif pantrynav == '2':
-        print("Enter name, info")
-    elif pantrynav == '3':
         pantry.save()
         sys.exit()
     else:

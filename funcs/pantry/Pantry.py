@@ -22,4 +22,4 @@ class Pantry:
     
     def save(self):
         with open("pantry.json", "w") as myPantry:
-            json.dump(self.pantry, myPantry)
+            json.dump(self.pantry, myPantry, indent=4, sort_keys=True)
