@@ -1,6 +1,7 @@
 import json
 import Item
 
+
 class Pantry:
 
     def __init__(self, pantry=None):
@@ -8,7 +9,6 @@ class Pantry:
             self.pantry = {}
         else:
             self.pantry = pantry
-        
         self.size = 0
     
     def toString(self):
@@ -23,7 +23,9 @@ class Pantry:
         else:
             self.pantry[name] = [purchase_date, expiration_date, quantity]
             self.size += 1
-            return "\n" + name + ": [" + purchase_date + ", " + expiration_date + ", " + quantity + "] -- item succesfully added!"
+            return "\n" + name + ": [" + purchase_date + ", " \
+                    + expiration_date + ", " + quantity + "] -- item succesfu"\
+                    "lly added!"
     
     def save(self):
         with open("pantry.json", "w") as myPantry:
