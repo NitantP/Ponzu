@@ -1,14 +1,26 @@
+import pantrymenu
+import sys
+
 print("Welcome to Ponzu!\n")
 
-print("[0] \t Pantry\n")
-menunav = input("Choose an option (number) from above: ")
+menunav = 0
 
-if menunav == '0':
-    print("Going to pantry!\n")
-elif menunav == '1':
-    print("Going to X!")
-elif menunav == '2':
-    print("Going to Y!")
-else:
-    print("Try again")
+while True:
+        print("[0] Pantry")
+        print("[1] Budget")
+        print("[q] Quit")
+        
+        menunav = input("Choose an option from above: ")
+        print("===========================================")
+
+        if menunav == '0':
+            pantrymenu.pantry_menu()
+        elif menunav == '1':
+            print("Budgeting coming soon!")
+        elif menunav == 'q':
+            sys.exit()
+        else:
+            print("Invalid choice")
+
+        print("===========================================")
 
