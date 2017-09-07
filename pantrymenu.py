@@ -14,14 +14,14 @@ def pantry_menu():
         print("-- No existing file found. Here's a fresh pantry!\n")
     
     while True:
-        print("[0] Print current pantry\n")
-        print("[1] Add item to pantry\n")
-        print("[2] Save pantry\n")
-        print("[3] Update pantry item\n")
-        print("[4] Search pantry for item\n")
-        print("[q] Exit pantry system\n")
+        print("[0] Print current pantry")
+        print("[1] Add item to pantry")
+        print("[2] Save pantry")
+        print("[3] Update pantry item")
+        print("[4] Search pantry for item")
+        print("[q] Exit")
 
-        pantrynav = input("Choose an option from above: ")
+        pantrynav = input("\nChoose an option from above: ")
         print("===========================================")
 
         if pantrynav == '0':
@@ -44,6 +44,7 @@ def pantry_menu():
         elif pantrynav == '4':
             print(pantry.search(input("Name: ")))
         elif pantrynav == 'q':
+            pantry.save()
             sys.exit()
         else:
             print("Invalid choice")

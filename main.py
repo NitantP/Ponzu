@@ -1,7 +1,7 @@
 import pantrymenu
 import sys
 
-print("Welcome to Ponzu!\n")
+print("\nWelcome to Ponzu!")
 
 menunav = 0
 
@@ -10,7 +10,7 @@ while True:
         print("[1] Budget")
         print("[q] Quit")
         
-        menunav = input("Choose an option from above: ")
+        menunav = input("\nChoose an option from above: ")
         print("===========================================")
 
         if menunav == '0':
