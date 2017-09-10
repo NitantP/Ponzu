@@ -24,13 +24,12 @@ class Pantry:
             self.pantry[name] = [purchase_date, expiration_date, quantity]
             self.size += 1
             return "\n" + name + ": [" + purchase_date + ", " \
-                    + expiration_date + ", " + quantity + "] -- item succesfu"\
-                    "lly added!"
+                    + expiration_date + ", " + quantity + "] -- added"
     
     def save(self):
         with open("pantry.json", "w") as myPantry:
             json.dump(self.pantry, myPantry, indent=4, sort_keys=True)
-        return "Pantry succesfully saved!"
+        return "Pantry saved!"
     
     def search(self, iname):
         attr = self.pantry[iname]

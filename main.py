@@ -1,4 +1,5 @@
 import pantrymenu
+import shoppinglistmenu
 import sys
 
 print("\nWelcome to Ponzu!")
@@ -7,7 +8,7 @@ menunav = 0
 
 while True:
         print("[0] Pantry")
-        print("[1] Budget")
+        print("[1] Shopping list")
         print("[q] Quit")
         
         menunav = input("\nChoose an option from above: ")
@@ -16,7 +17,7 @@ while True:
         if menunav == '0':
             pantrymenu.pantry_menu()
         elif menunav == '1':
-            print("Budgeting coming soon!")
+            shoppinglistmenu.shoppinglist_menu()
         elif menunav == 'q':
             sys.exit()
         else:
