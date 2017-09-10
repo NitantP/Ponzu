@@ -1,6 +1,7 @@
 import json
 import ShoppingList
 import sys
+import main
 
 def shoppinglist_menu():
     print("Welcome to your shopping list!")
@@ -18,6 +19,7 @@ def shoppinglist_menu():
         print("[1] Add item to shopping list")
         print("[2] Delete shopping list")
         print("[3] Save shopping list")
+        print("[4] Check pantry")
         print("[q] Exit")
         
         shoppinglistnav = input("\nChoose an option from above: ")
@@ -31,9 +33,11 @@ def shoppinglist_menu():
             print(shoppinglist.delete(input("Name: ")))
         elif shoppinglistnav == '3':
             print(shoppinglist.save())
+        elif shoppinglistnav == '4':
+            shoppinglist.pantry_match()
         elif shoppinglistnav == 'q':
             shoppinglist.save()
-            sys.exit()
+            main.main_menu()
         else: 
             print("Invalid choice")
     

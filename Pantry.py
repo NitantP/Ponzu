@@ -1,5 +1,4 @@
 import json
-import Item
 
 
 class Pantry:
@@ -7,9 +6,10 @@ class Pantry:
     def __init__(self, pantry=None):
         if pantry is None:
             self.pantry = {}
+            self.size = 0
         else:
             self.pantry = pantry
-        self.size = 0
+            self.size = len(pantry)
     
     def toString(self):
         """Used to print contents of the pantry."""

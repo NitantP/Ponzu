@@ -1,6 +1,7 @@
 import Pantry
 import json
 import sys
+import main
 
 def pantry_menu():
     print("Welcome to the pantry")
@@ -45,7 +46,7 @@ def pantry_menu():
             print(pantry.search(input("Name: ")))
         elif pantrynav == 'q':
             pantry.save()
-            sys.exit()
+            main.main_menu()
         else:
             print("Invalid choice")
 

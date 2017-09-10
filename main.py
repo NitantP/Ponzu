@@ -2,11 +2,10 @@ import pantrymenu
 import shoppinglistmenu
 import sys
 
-print("\nWelcome to Ponzu!")
+def main_menu():
+    print("\nWelcome to Ponzu!")
 
-menunav = 0
-
-while True:
+    while True:
         print("[0] Pantry")
         print("[1] Shopping list")
         print("[q] Quit")
@@ -24,4 +23,7 @@ while True:
             print("Invalid choice")
 
         print("===========================================")
+
+if __name__ == "__main__":
+    main_menu()
 
